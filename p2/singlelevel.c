@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 
 int main(){
 
@@ -16,7 +17,7 @@ int main(){
   printf("Root dir is: %s\n", root.dname);
 
   while(1){
-    printf("1.Create 2.Display 3.Search 4.Exit\n");
+    printf("1.Create 2.Display 3.Search 4.Delete 5.Exit\n");
     scanf("%d", &ch);
 
     switch(ch){
@@ -33,14 +34,24 @@ int main(){
         break;
 
       case 3:
-        printf("Enter the file to be deleted\n");
-        scanf("%s", search)
+        printf("Enter the file to be searched\n");
+        scanf("%s", search);
         for(i=0; i<=root.fcnt; i++){
           if(root.fname[i] == search)
-            printf("Found at %s\n", i);
+            printf("Found at %ds\n", i);
         }
         printf("\n");
-        break;1
+        break;
+        
+    case 4:
+    	printf("Enter the file to be deleted\n");
+        scanf("%s", search);
+        for(i=0; i<=root.fcnt; i++){
+          if(root.fname[i] == search)
+            printf("Found at %ds\n", i);
+    
+    case 5:
+    	exit(0);
 
     }
   }
